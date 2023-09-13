@@ -3,13 +3,15 @@ import Card from "react-bootstrap/Card";
 
 function Cards(prop) {
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={prop.src} />
+    <Card style={{ width: "20rem"}}>
+      <Card.Img src={prop.src} style={{ height: "10rem", width:'15rem'}} />
       <Card.Body>
         <Card.Title>{prop.title}</Card.Title>
-        <Card.Text>{prop.desc}</Card.Text>
+        <Card.Text>${prop.price}</Card.Text>
+        <Card.Text>{prop.rating}★</Card.Text>
+        <Card.Text>{prop.description}</Card.Text>
         <Button variant="primary">
-          Go somewhere
+          Add to cart
         </Button>
       </Card.Body>
     </Card>
