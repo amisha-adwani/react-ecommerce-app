@@ -23,8 +23,7 @@ const Home = () => {
                 <Cards
                   src={product.image}
                   title={product.title}
-                  desc={product.descriptio}
-                  button={cardDetail}
+                  desc={product.description}
                 />
               </Col>
             </div>

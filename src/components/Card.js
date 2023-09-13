@@ -8,7 +8,7 @@ function Cards(prop) {
       <Card.Body>
         <Card.Title>{prop.title}</Card.Title>
         <Card.Text>{prop.desc}</Card.Text>
-        <Button variant="primary" onClick={prop.button}>
+        <Button variant="primary">
           Go somewhere
         </Button>
       </Card.Body>
