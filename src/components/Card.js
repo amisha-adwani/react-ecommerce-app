@@ -7,8 +7,8 @@ function Cards(prop) {
       <Card.Img src={prop.src} style={{ height: "10rem", width:'15rem'}} />
       <Card.Body>
         <Card.Title>{prop.title}</Card.Title>
-        <Card.Text>${prop.price}</Card.Text>
-        <Card.Text>{prop.rating}★</Card.Text>
+        <Card.Text style={{fontSize:'1.25rem',fontWeight:'bold'}}>${prop.price}</Card.Text>
+        <Card.Text style={{backgroundColor:'green', color:'white', width:'2.5rem', borderRadius:'2px', textAlign:'center'}}>{prop.rating}★</Card.Text>
         <Card.Text>{prop.description}</Card.Text>
         <Button variant="primary">
           Add to cart
