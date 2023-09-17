@@ -9,8 +9,8 @@ function App() {
   return (
     <div>
       <Router>
-      <Navigation/>
       <ItemState>
+      <Navigation/>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/men's clothing" element={<Home category="men's clothing" />} />

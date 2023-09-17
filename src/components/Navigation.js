@@ -5,8 +5,13 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { LinkContainer } from "react-router-bootstrap";
+import { ItemContext } from "../context/ItemContext";
+import { useContext } from "react";
 
 function Navigation(prop) {
+  const context = useContext(ItemContext);
+  const {searchFilter} = context;
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
@@ -47,7 +52,7 @@ function Navigation(prop) {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
-              onChange={prop.handleChange}
+              onChange={searchFilter}
             />
             <Button variant="outline-success">Search</Button>
           </Form>

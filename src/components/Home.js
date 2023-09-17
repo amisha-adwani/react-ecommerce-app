@@ -1,20 +1,22 @@
-import React, {useContext, useEffect} from "react";
+import React, { useContext, useEffect } from "react";
 import Cards from "./Card";
 import { Col, Row } from "react-bootstrap";
 import { ItemContext } from "../context/ItemContext";
 
 const Home = ({ category }) => {
   const context = useContext(ItemContext);
-  const { cardData, cardDetail } = context;
+  const { cardData, cardDetail, filteredList } = context;
 
-    useEffect(() => {
+  useEffect(() => {
     cardDetail(category);
   }, [category]);
+
+  const dataToRender = filteredList.length > 0 ? filteredList : cardData;
   return (
     <>
       <div className="container">
         <Row xs={1} md={2} lg={3} className="g-4">
-          {cardData.map((product) => {
+          {dataToRender.map((product) => {
             return (
               <div key={product.id}>
                 <Col className="m-4">
