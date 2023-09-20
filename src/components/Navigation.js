@@ -54,7 +54,10 @@ function Navigation(prop) {
               aria-label="Search"
               onChange={searchFilter}
             />
-            <Button variant="outline-success">Search</Button>
+            <LinkContainer to="/cart">
+            <Button variant="success">Cart</Button>
+            </LinkContainer>
+
           </Form>
         </Navbar.Collapse>
       </Container>
