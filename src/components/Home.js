@@ -5,7 +5,7 @@ import { ItemContext } from "../context/ItemContext";
 
 const Home = ({ category }) => {
   const context = useContext(ItemContext);
-  const { cardData, cardDetail, filteredList } = context;
+  const { cardData, cardDetail, filteredList, AddToCart } = context;
 
   useEffect(() => {
     cardDetail(category);
@@ -28,6 +28,7 @@ const Home = ({ category }) => {
                     }
                     price={product.price}
                     rating={product.rating.rate}
+                    handleClick={()=>AddToCart({product})}
                   />
                 </Col>
               </div>
