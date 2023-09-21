@@ -83,6 +83,11 @@ export function ItemState({ children }) {
     const total= cartList.reduce((total,item )=> total + item.price * item.quantity,0)
     return Math.round(total * 20)/20
   }
+
+  const TotalItems =()=>{
+    const total= cartList.reduce((total,item )=> total + item.quantity,0)
+    return total
+  }
   return (
     <ItemContext.Provider
       value={{
@@ -93,7 +98,8 @@ export function ItemState({ children }) {
         AddToCart,
         cartList,
         removeFromCart,
-        getTotal
+        getTotal,
+        TotalItems
       }}
     >
       {children}
