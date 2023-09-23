@@ -3,9 +3,8 @@ import Home from "./components/Home";
 import Navigation from "./components/Navigation";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {  ItemState } from "./context/ItemContext";
-import Cart from "./components/Cart";
 import CheckoutPage from "./components/CheckoutPage";
-
+import Product from "./components/Product";
 
 function App() {
   return (
@@ -15,6 +14,7 @@ function App() {
       <Navigation/>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/:id" element={<Product />} />
           <Route path="/men's clothing" element={<Home category="men's clothing" />} />
           <Route path="/jewelery" element={<Home category="jewelery" />} />
           <Route path="/electronics" element={<Home category="electronics" />} />

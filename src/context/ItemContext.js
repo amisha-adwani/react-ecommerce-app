@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-
 export const ItemContext = createContext();
 
 export function ItemState({ children }) {
@@ -16,9 +15,9 @@ export function ItemState({ children }) {
     }
     let data = await fetch(url);
     let parsedData = await data.json();
-    setcardData(parsedData);
+    setcardData(parsedData); 
   };
-
+  
   const searchFilter = (e) => {
     //get value from search bar
     let query = e.target.value;
@@ -99,7 +98,7 @@ export function ItemState({ children }) {
         cartList,
         removeFromCart,
         getTotal,
-        TotalItems
+        TotalItems,
       }}
     >
       {children}

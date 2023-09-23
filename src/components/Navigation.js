@@ -8,10 +8,11 @@ import { LinkContainer } from "react-router-bootstrap";
 import { ItemContext } from "../context/ItemContext";
 import { useContext } from "react";
 import { Badge } from "react-bootstrap";
-
+import {  useParams } from "react-router-dom";
 function Navigation(prop) {
+  const {id} = useParams()
   const context = useContext(ItemContext);
-  const { cartList, searchFilter, cartItem, TotalItems } = context;
+  const {  searchFilter, TotalItems } = context;
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -30,6 +31,9 @@ function Navigation(prop) {
               <Nav.Link>All</Nav.Link>
             </LinkContainer>
             <NavDropdown title="Products" id="navbarScrollingDropdown">
+              <LinkContainer to={"/product/" + id}>
+                <NavDropdown.Item>Product</NavDropdown.Item>
+              </LinkContainer>
               <LinkContainer to="/electronics">
                 <NavDropdown.Item>Electronics</NavDropdown.Item>
               </LinkContainer>
