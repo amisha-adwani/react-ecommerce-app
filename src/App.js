@@ -3,7 +3,6 @@ import Home from "./components/Home";
 import Navigation from "./components/Navigation";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {  ItemState } from "./context/ItemContext";
-import Cart from "./components/Cart";
 import CheckoutPage from "./components/CheckoutPage";
 
 

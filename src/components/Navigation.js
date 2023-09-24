@@ -11,7 +11,7 @@ import { Badge } from "react-bootstrap";
 
 function Navigation(prop) {
   const context = useContext(ItemContext);
-  const { cartList, searchFilter, cartItem, TotalItems } = context;
+  const { searchFilter, TotalItems } = context;
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">

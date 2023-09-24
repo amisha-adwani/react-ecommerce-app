@@ -5,7 +5,7 @@ import { ItemContext } from "../context/ItemContext";
 
 const CheckoutPage = () => {
   const context = useContext(ItemContext);
-  const { cartList, removeFromCart,getTotal } = context;
+  const { cartList, removeFromCart,getTotal,AddToCart } = context;
   return (
     <>
       <div className="container">
@@ -26,6 +26,7 @@ const CheckoutPage = () => {
                       rating={product.rating?.rate}
                       quantity={product.quantity}
                       handleClick={() => removeFromCart({ product })}
+                      handleClick1={() => AddToCart({ product })}
                     />
                   </Col>
                 </div>
