@@ -2,10 +2,12 @@ import React, { useContext, useEffect } from "react";
 import Cards from "./Card";
 import { Col, Row } from "react-bootstrap";
 import { ItemContext } from "../context/ItemContext";
+import { useNavigate } from "react-router-dom";
 
 const Home = ({ category }) => {
+  let navigate = useNavigate();
   const context = useContext(ItemContext);
-  const { cardData, cardDetail, filteredList, AddToCart } = context;
+  const { cardData, cardDetail, filteredList, AddToCart, GoToProduct } = context;
 
   useEffect(() => {
     cardDetail(category);
@@ -28,7 +30,14 @@ const Home = ({ category }) => {
                     }
                     price={product.price}
                     rating={product.rating.rate}
-                    handleClick={()=>AddToCart({product})}
+                    handleClick={(e) => {
+                      e.stopPropagation();
+                      AddToCart({ product })
+                    }
+                    }
+                    cardClick={() => {
+                      navigate('/product');
+                    }}
                   />
                 </Col>
               </div>
