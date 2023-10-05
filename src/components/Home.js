@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Home = ({ category }) => {
   let navigate = useNavigate();
   const context = useContext(ItemContext);
-  const { cardData, cardDetail, filteredList, AddToCart, GoToProduct } = context;
+  const { cardData, cardDetail, filteredList, AddToCart } = context;
 
   useEffect(() => {
     cardDetail(category);

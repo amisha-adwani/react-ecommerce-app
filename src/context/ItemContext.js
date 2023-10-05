@@ -78,16 +78,6 @@ export function ItemState({ children }) {
     }
   };
 
-  const GoToProduct = ({ product }) => {
-    //check if the product exists in the list
-    const existingProduct = cartList.find(
-      (cartItem) => cartItem.id === product.id
-    );
-    if (existingProduct) {
-
-    }
-  };
-
 
   const getTotal = () => {
     const total = cartList.reduce((total, item) => total + item.price * item.quantity, 0)
@@ -110,7 +100,6 @@ export function ItemState({ children }) {
         removeFromCart,
         getTotal,
         TotalItems,
-        GoToProduct
       }}
     >
       {children}
