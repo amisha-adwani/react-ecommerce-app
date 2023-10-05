@@ -36,7 +36,11 @@ const Home = ({ category }) => {
                     }
                     }
                     cardClick={() => {
-                      navigate('/product');
+                      navigate('/product', {
+                        state: {
+                          data: product
+                        }
+                      });
                     }}
                   />
                 </Col>
