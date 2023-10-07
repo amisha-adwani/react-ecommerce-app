@@ -9,7 +9,7 @@ const CheckoutPage = () => {
   return (
     <>
       <div className="container">
-        <h1>cart</h1>
+        <h1>Your cart</h1>
         <Row xs={1} md={2} lg={3} className="g-4">
           {cartList.length > 0 ? (
             cartList.map((product) => {
