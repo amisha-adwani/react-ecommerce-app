@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 
 function Cards(prop) {
   return (
-    <Card onClick={prop.cardClick} style={{ width: "20rem" }}>
+    <Card onClick={prop.cardClick} style={{ width: "20rem" ,cursor:'pointer'}}>
       <Card.Img src={prop.src} style={{ height: "10rem", width: '15rem' }} />
       <Card.Body>
         <Card.Title>{prop.title}</Card.Title>
