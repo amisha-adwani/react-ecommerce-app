@@ -11,6 +11,7 @@ const Home = ({ category }) => {
 
   useEffect(() => {
     cardDetail(category);
+     // eslint-disable-next-line
   }, [category]);
 
   const dataToRender = filteredList.length > 0 ? filteredList : cardData;
